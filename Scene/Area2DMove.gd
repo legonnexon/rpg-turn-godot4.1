@@ -11,9 +11,9 @@ func _process(delta):
 	var velocity = Vector2.ZERO
 	if true:
 		velocity.x += 1
+		$AnimatedSprite2D.play("andando")
 	
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 	
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)

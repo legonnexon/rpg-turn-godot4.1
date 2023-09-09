@@ -7,18 +7,43 @@
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_1425s")
-speed = null
 metadata/_edit_horizontal_guides_ = [552.0]
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(576, 472)
+texture = ExtResource("1_mqqsr")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(576, 472)
+texture = ExtResource("3_lacg5")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(576, 472)
+texture = ExtResource("3_p7h3i")
+
 [node name="meio_mato" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(576, 472)
 texture = ExtResource("1_mqqsr")
 
 [node name="baixo_mato" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(576, 472)
 texture = ExtResource("3_lacg5")
 metadata/_edit_group_ = true
 
 [node name="cima_mato" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(576, 472)
 texture = ExtResource("3_p7h3i")

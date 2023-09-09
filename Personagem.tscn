@@ -1,37 +1,50 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3aokieyj2tlk"]
+[gd_scene load_steps=8 format=3 uid="uid://c3aokieyj2tlk"]
 
 [ext_resource type="Script" path="res://Scene/Area2DMove.gd" id="1_cddpx"]
 [ext_resource type="Texture2D" uid="uid://b26m8dx036o6f" path="res://Sprites/personagem_1.png" id="2_dri8q"]
+[ext_resource type="Texture2D" uid="uid://bk3j8e1f1sm2w" path="res://Sprites/personagem_2.png" id="3_75bw7"]
+[ext_resource type="Texture2D" uid="uid://bdfqjkisn30yb" path="res://Sprites/personagem_3.png" id="4_37who"]
+[ext_resource type="Texture2D" uid="uid://bly74yicogora" path="res://Sprites/personagem_4.png" id="5_vgnnw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lxqvv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_dri8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_75bw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_37who")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vgnnw")
 }],
 "loop": true,
-"name": &"parado",
+"name": &"andando",
 "speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_etjwk"]
-radius = 16.0
+radius = 24.0
 height = 64.0
 
 [node name="Area2D" type="Area2D"]
-position = Vector2(-32, 0)
+position = Vector2(576, 325)
 script = ExtResource("1_cddpx")
 speed = 200
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(152, 456)
+position = Vector2(-344, 115)
 sprite_frames = SubResource("SpriteFrames_lxqvv")
-animation = &"parado"
+animation = &"andando"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(152, 456)
+position = Vector2(-344, 115)
 shape = SubResource("CapsuleShape2D_etjwk")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(-48, 472)
+
+[node name="Camera2D" type="Camera2D" parent="."]
