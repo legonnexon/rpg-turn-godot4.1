@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdk6pcu07lj4c"]
+
+[ext_resource type="Script" path="res://Scene/CampanhaMenu.gd" id="1_1425s"]
+[ext_resource type="Texture2D" uid="uid://cfmrja1bgbx" path="res://Sprites/spr_meio_mato.png" id="1_mqqsr"]
+[ext_resource type="Texture2D" uid="uid://dqlu1q23irwst" path="res://Sprites/spr_baixo_mato.png" id="3_lacg5"]
+[ext_resource type="Texture2D" uid="uid://d101rxo4of1ol" path="res://Sprites/spr_cima_mato.png" id="3_p7h3i"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1425s")
+speed = null
+metadata/_edit_horizontal_guides_ = [552.0]
+
+[node name="meio_mato" type="Sprite2D" parent="."]
+position = Vector2(576, 472)
+texture = ExtResource("1_mqqsr")
+
+[node name="baixo_mato" type="Sprite2D" parent="."]
+position = Vector2(576, 472)
+texture = ExtResource("3_lacg5")
+metadata/_edit_group_ = true
+
+[node name="cima_mato" type="Sprite2D" parent="."]
+position = Vector2(576, 472)
+texture = ExtResource("3_p7h3i")

@@ -1,11 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://i2d0howmbroq"]
+[gd_scene load_steps=5 format=3 uid="uid://i2d0howmbroq"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_8is6u"]
 [ext_resource type="PackedScene" uid="uid://cchv14tbykgq5" path="res://Scene/CanvaMenu.tscn" id="2_oqj8a"]
+[ext_resource type="PackedScene" uid="uid://c3aokieyj2tlk" path="res://Personagem.tscn" id="3_sch0y"]
+[ext_resource type="PackedScene" uid="uid://cdk6pcu07lj4c" path="res://Scene/Campanha.tscn" id="3_tpl3p"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_8is6u")
+metadata/_edit_horizontal_guides_ = []
 
 [node name="CanvasLayer" parent="." instance=ExtResource("2_oqj8a")]
+
+[node name="Node2D" parent="." instance=ExtResource("3_tpl3p")]
+
+[node name="Area2D" parent="." instance=ExtResource("3_sch0y")]
 
 [connection signal="campain" from="CanvasLayer" to="." method="_on_canvas_layer_campain"]
